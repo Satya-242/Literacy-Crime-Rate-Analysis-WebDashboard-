@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Korea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body class="bg-blue-50">
+    <div class="max-w-4xl mx-auto p-6">
+        <div class="text-sm text-gray-600 mb-2">
+            Countries &gt; South Korea
+        </div>
+        <div class="flex items-center mb-4">
+            <img alt="Flag of India" class="w-10 h-8 mr-2" height="30" src="Southkoera.jpeg" width="40"/>
+            <h1 class="text-3xl font-bold">
+                South Korea
+            </h1>
+        </div>
+        <div class="mb-4">
+            <p>
+                <span class="font-semibold">
+                    Capital:
+                </span>
+                <a class="text-blue-600" href="#">
+                    Seoul
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Continent:
+                </span>
+                <a class="text-blue-600" href="#">
+                   Asia
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Region(s):
+                </span>
+                <a class="text-blue-600" href="#">
+                    East Asia
+                </a>
+                ,
+                <a class="text-blue-600" href="#">
+                   Situated on the southern part of the Korean peninsula
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Largest Cities:
+                </span>
+                <a class="text-blue-600" href="#">
+                   Seoul
+                </a>
+                ,
+                <a class="text-blue-600" href="#">
+                   Busan
+                </a>
+                ,
+                <a class="text-blue-600" href="#">
+                   Incheon
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Abbreviation:
+                </span>
+                SK
+            </p>
+        </div>
+        <p class="mb-6">
+            South Korea is a country in
+            <a class="text-blue-600" href="#">
+             the continent of Asia
+            </a>
+            known for its rich culture, K-pop, and innovation. It has a dynamic economy, scenic landscapes, and a deep-rooted history.<div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    98%
+                </p>
+                <p class="text-gray-600">
+                    Literacy Rate
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    0.6
+                </p>
+                <p class="text-gray-600">
+                    Homicide
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    0.89
+                </p>
+                <p class="text-gray-600">
+                    Theft
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                   0
+                </p>
+                <p class="text-gray-600">
+                    Corruption
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                   904
+                </p>
+                <p class="text-gray-600">
+                    Sexual Violence
+                </p>
+            </div>
+        </div>
+        <div class="w-full max-w-4xl p-4 bg-white rounded shadow">
+            <div id="chart" class="w-full h-96"></div>
+        </div>
+    </div>
+
+    <script>
+        var trace1 = {
+            x: [1990, 2000, 2010, 2020],
+            y: [490, 73.56, 488.98, 905.49],
+            mode: 'lines+markers',
+            name: 'Crime Rate',
+            line: {color: 'blue'}
+        };
+
+        var trace2 = {
+            x: [1990, 2000, 2010, 2020],
+            y: [97, 97.9, 97.9, 98],
+            mode: 'lines+markers',
+            name: 'Literacy Rate',
+            line: {color: 'red'}
+        };
+
+        var data = [trace1, trace2];
+
+        var layout = {
+            title: 'Total Crime Rate vs Literacy Rate in South Korea',
+            xaxis: {
+                title: 'Year'
+            },
+            yaxis: {
+                title: 'Rate'
+            },
+            legend: {
+                x: 1,
+                xanchor: 'right',
+                y: 1
+            }
+        };
+
+        Plotly.newPlot('chart', data, layout);
+    </script>
+</body>
+</html>

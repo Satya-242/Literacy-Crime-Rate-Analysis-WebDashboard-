@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Information</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body class="bg-blue-50">
+    <div class="max-w-4xl mx-auto p-6">
+        <div class="text-sm text-gray-600 mb-2">
+            Countries &gt; Japan
+        </div>
+        <div class="flex items-center mb-4">
+            <img alt="Flag of India" class="w-10 h-8 mr-2" height="30" src="jappan.png" width="40"/>
+            <h1 class="text-3xl font-bold">
+                Japan
+            </h1>
+        </div>
+        <div class="mb-4">
+            <p>
+                <span class="font-semibold">
+                    Capital:
+                </span>
+                <a class="text-blue-600" href="#">
+                    Tokyo
+
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Continent:
+                </span>
+                <a class="text-blue-600" href="#">
+                    Asia
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Region(s):
+                </span>
+                <a class="text-blue-600" href="#">
+                    East Asia
+                </a>
+                ,
+                <a class="text-blue-600" href="#">
+                    East Asia
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Largest Cities:
+                </span>
+                <a class="text-blue-600" href="#">
+                    Tokyo
+
+                </a>
+                ,
+                <a class="text-blue-600" href="#">
+                   Osaka
+                </a>
+                
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Abbreviation:
+                </span>
+                JAP
+            </p>
+        </div>
+        <p class="mb-6">
+            Japan is a country in
+            <a class="text-blue-600" href="#">
+               Asia
+            </a>
+            known for its rich cultural heritage, advanced technology, and stunning natural beauty. It blends ancient traditions like tea ceremonies and sumo wrestling with modern innovations and bustling cities like Tokyo.            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    99%
+                </p>
+                <p class="text-gray-600">
+                    Literacy Rate
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    0.25
+                </p>
+                <p class="text-gray-600">
+                    Homicide
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    297
+                </p>
+                <p class="text-gray-600">
+                    Theft
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                   0.12
+                </p>
+                <p class="text-gray-600">
+                    Corruption
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    4.38
+                </p>
+                <p class="text-gray-600">
+                    Sexual Violence
+                </p>
+            </div>
+        </div>
+        <div class="w-full max-w-4xl p-4 bg-white rounded shadow">
+            <div id="chart" class="w-full h-96"></div>
+        </div>
+    </div>
+
+    <script>
+        var trace1 = {
+            x: [1990, 2000, 2010, 2020],
+            y: [365.35,411.15,489.81,301.75],
+            mode: 'lines+markers',
+            name: 'Crime Rate',
+            line: {color: 'blue'}
+        };
+
+        var trace2 = {
+            x: [1990, 2000, 2010, 2020],
+            y: [99,99, 99, 99],
+            mode: 'lines+markers',
+            name: 'Literacy Rate',
+            line: {color: 'red'}
+        };
+
+        var data = [trace1, trace2];
+
+        var layout = {
+            title: 'Total Crime Rate vs Literacy Rate in Japan',
+            xaxis: {
+                title: 'Year'
+            },
+            yaxis: {
+                title: 'Rate'
+            },
+            legend: {
+                x: 1,
+                xanchor: 'right',
+                y: 1
+            }
+        };
+
+        Plotly.newPlot('chart', data, layout);
+    </script>
+</body>
+</html>

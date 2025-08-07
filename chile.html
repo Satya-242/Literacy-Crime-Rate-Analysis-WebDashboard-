@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chile Information</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body class="bg-blue-50">
+    <div class="max-w-4xl mx-auto p-6">
+        <div class="text-sm text-gray-600 mb-2">
+            Countries &gt; Chile
+        </div>
+        <div class="flex items-center mb-4">
+            <img alt="Flag of India" class="w-10 h-8 mr-2" height="30" src="ch.webp" width="40"/>
+            <h1 class="text-3xl font-bold">
+                Chile
+            </h1>
+        </div>
+        <div class="mb-4">
+            <p>
+                <span class="font-semibold">
+                    Capital:
+                </span>
+                <a class="text-blue-600" href="#">
+                    Santiago
+
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Continent:
+                </span>
+                <a class="text-blue-600" href="#">
+                    South America
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Region(s):
+                </span>
+                <a class="text-blue-600" href="#">
+                   Western South American
+                </a>
+                ,
+                <a class="text-blue-600" href="#">
+                    South American
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Largest Cities:
+                </span>
+                <a class="text-blue-600" href="#">
+                    La Serena
+
+                </a>
+                ,
+                <a class="text-blue-600" href="#">
+                    Arica
+                </a>
+                
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Abbreviation:
+                </span>
+                CH
+            </p>
+        </div>
+        <p class="mb-6">
+            Chile is a country in
+            <a class="text-blue-600" href="#">
+                South America
+            </a>
+            narrow country stretching along South America's western edge, with the Andes mountains to the east and the Pacific Ocean to the west. It is known for its diverse landscapes, including deserts, glaciers, and vineyards. 
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    97.12%
+                </p>
+                <p class="text-gray-600">
+                    Literacy Rate
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    4.8
+                </p>
+                <p class="text-gray-600">
+                    Homicide
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    500.63
+                </p>
+                <p class="text-gray-600">
+                    Theft
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    14.89
+                </p>
+                <p class="text-gray-600">
+                    Corruption
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    81.3
+                </p>
+                <p class="text-gray-600">
+                    Sexual Violence
+                </p>
+            </div>
+        </div>
+        <div class="w-full max-w-4xl p-4 bg-white rounded shadow">
+            <div id="chart" class="w-full h-96"></div>
+        </div>
+    </div>
+
+    <script>
+        var trace1 = {
+            x: [1990, 2000, 2010, 2020],
+            y: [1.93, 1025.33, 1181.44, 601.62],
+            mode: 'lines+markers',
+            name: 'Crime Rate',
+            line: {color: 'blue'}
+        };
+
+        var trace2 = {
+            x: [1990, 2000, 2010, 2020],
+            y: [94.29, 95.7, 97.4, 97.12],
+            mode: 'lines+markers',
+            name: 'Literacy Rate',
+            line: {color: 'red'}
+        };
+
+        var data = [trace1, trace2];
+
+        var layout = {
+            title: 'Total Crime Rate vs Literacy Rate in Chile',
+            xaxis: {
+                title: 'Year'
+            },
+            yaxis: {
+                title: 'Rate'
+            },
+            legend: {
+                x: 1,
+                xanchor: 'right',
+                y: 1
+            }
+        };
+
+        Plotly.newPlot('chart', data, layout);
+    </script>
+</body>
+</html>

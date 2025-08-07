@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madagascar Information</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body class="bg-blue-50">
+    <div class="max-w-4xl mx-auto p-6">
+        <div class="text-sm text-gray-600 mb-2">
+            Countries &gt; Madagascar
+        </div>
+        <div class="flex items-center mb-4">
+            <img alt="Flag of India" class="w-10 h-8 mr-2" height="30" src="mad.png" width="40"/>
+            <h1 class="text-3xl font-bold">
+                Madagascar
+            </h1>
+        </div>
+        <div class="mb-4">
+            <p>
+                <span class="font-semibold">
+                    Capital:
+                </span>
+                <a class="text-blue-600" href="#">
+                    Antananarivo 
+
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Continent:
+                </span>
+                <a class="text-blue-600" href="#">
+                    Africa
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Region(s):
+                </span>
+                <a class="text-blue-600" href="#">
+                    SouthEastern African
+                </a>
+                ,
+                <a class="text-blue-600" href="#">
+                    SouthEastern African
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Largest Cities:
+                </span>
+                <a class="text-blue-600" href="#">
+                    Antananarivo
+
+                </a>
+                ,
+                <a class="text-blue-600" href="#">
+                    Toliara
+                </a>
+                
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Abbreviation:
+                </span>
+                MAD
+            </p>
+        </div>
+        <p class="mb-6">
+            Madagascar is a country in
+            <a class="text-blue-600" href="#">
+               Africa
+            </a>
+            Known for its unique biodiversity, over 90% of its wildlife is found nowhere else on Earth, including lemurs and baobab trees. The island also has a rich cultural heritage influenced by both African and Asian roots.
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    64.7%
+                </p>
+                <p class="text-gray-600">
+                    Literacy Rate
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    7.7
+                </p>
+                <p class="text-gray-600">
+                    Homicide
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                 0.89
+                </p>
+                <p class="text-gray-600">
+                    Theft
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                   64.25
+                </p>
+                <p class="text-gray-600">
+                    Corruption
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    55.6
+                </p>
+                <p class="text-gray-600">
+                    Sexual Violence
+                </p>
+            </div>
+        </div>
+        <div class="w-full max-w-4xl p-4 bg-white rounded shadow">
+            <div id="chart" class="w-full h-96"></div>
+        </div>
+    </div>
+
+    <script>
+        var trace1 = {
+            x: [1990, 2000, 2010, 2020],
+            y: [244,250.78,35.11,128.44],
+            mode: 'lines+markers',
+            name: 'Crime Rate',
+            line: {color: 'blue'}
+        };
+
+        var trace2 = {
+            x: [1990, 2000, 2010, 2020],
+            y: [60,77.7,64.5, 64.7],
+            mode: 'lines+markers',
+            name: 'Literacy Rate',
+            line: {color: 'red'}
+        };
+
+        var data = [trace1, trace2];
+
+        var layout = {
+            title: 'Total Crime Rate vs Literacy Rate in Madagascar',
+            xaxis: {
+                title: 'Year'
+            },
+            yaxis: {
+                title: 'Rate'
+            },
+            legend: {
+                x: 1,
+                xanchor: 'right',
+                y: 1
+            }
+        };
+
+        Plotly.newPlot('chart', data, layout);
+    </script>
+</body>
+</html>

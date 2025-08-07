@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United States</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body class="bg-blue-50">
+    <div class="max-w-4xl mx-auto p-6">
+        <div class="text-sm text-gray-600 mb-2">
+            Countries &gt;United States
+        </div>
+        <div class="flex items-center mb-4">
+            <img alt="Flag of India" class="w-10 h-8 mr-2" height="30" src="us.avif" width="40"/>
+            <h1 class="text-3xl font-bold">
+                United States
+            </h1>
+        </div>
+        <div class="mb-4">
+            <p>
+                <span class="font-semibold">
+                    Capital:
+                </span>
+                <a class="text-blue-600" href="#">
+                    Washington
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Continent:
+                </span>
+                <a class="text-blue-600" href="#">
+                    North America
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Region(s):
+                </span>
+                <a class="text-blue-600" href="#">
+                    Northeast 
+                </a>
+                ,
+                <a class="text-blue-600" href="#">
+                    Midwest
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Largest Cities:
+                </span>
+                <a class="text-blue-600" href="#">
+                  New York
+                </a>
+                ,
+                <a class="text-blue-600" href="#">
+                   Los Angeles, california
+                </a>
+                ,
+                <a class="text-blue-600" href="#">
+                   Chicago
+                </a>
+            </p>
+            <p>
+                <span class="font-semibold">
+                    Abbreviation:
+                </span>
+                US
+            </p>
+        </div>
+        <p class="mb-6">
+            United States is a country in
+            <a class="text-blue-600" href="#">
+             the continent of North America
+            </a>
+            made up of 50 states. It is known for its global influence, cultural diversity, and technological innovation.<div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    99%
+                </p>
+                <p class="text-gray-600">
+                    Literacy Rate
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    6.9
+                </p>
+                <p class="text-gray-600">
+                    Homicide
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    1.5
+                </p>
+                <p class="text-gray-600">
+                    Theft
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    0.83
+                </p>
+                <p class="text-gray-600">
+                    Corruption
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-center">
+                <p class="text-2xl font-bold">
+                    NaNa
+                </p>
+                <p class="text-gray-600">
+                    Sexual Violence
+                </p>
+            </div>
+        </div>
+        <div class="w-full max-w-4xl p-4 bg-white rounded shadow">
+            <div id="chart" class="w-full h-96"></div>
+        </div>
+    </div>
+
+    <script>
+        var trace1 = {
+            x: [1990, 2000, 2010, 2020],
+            y: [47.78, 38.4, 29.35, 40.01],
+            mode: 'lines+markers',
+            name: 'Crime Rate',
+            line: {color: 'blue'}
+        };
+
+        var trace2 = {
+            x: [1990, 2000, 2010, 2020],
+            y: [75, 99, 99, 99],
+            mode: 'lines+markers',
+            name: 'Literacy Rate',
+            line: {color: 'red'}
+        };
+
+        var data = [trace1, trace2];
+
+        var layout = {
+            title: 'Total Crime Rate vs Literacy Rate in United States',
+            xaxis: {
+                title: 'Year'
+            },
+            yaxis: {
+                title: 'Rate'
+            },
+            legend: {
+                x: 1,
+                xanchor: 'right',
+                y: 1
+            }
+        };
+
+        Plotly.newPlot('chart', data, layout);
+    </script>
+</body>
+</html>
